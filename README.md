@@ -1,6 +1,8 @@
 # GitHub Activity CLI
 
 A simple command-line application that fetches a GitHub user's recent activity using the GitHub API and displays it in the terminal.
+Made as a project:
+https://roadmap.sh/projects/github-user-activity
 
 ## Features
 
@@ -47,6 +49,3 @@ Example:
 - branch created in octobird/Hello-World
 - starred octodoplhin/Spoon-Knife
 ```
-##Project URL
-
-https://github.com/vincentmuller-pr/github-activity
