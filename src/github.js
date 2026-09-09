@@ -7,4 +7,13 @@ async function fetch_user_activity(username) {
     return await response.json();
 }
 
-module.exports = {fetch_user_activity}
+async function fetch_push_commits(repo_url, head, before) {
+    const response = await fetch(repo_url + `/compare/${before}...${head}`);
+    if (!response.ok) {
+        throw new Error(`error in finding push commits`)
+    }
+    const compare = await response.json();
+    return compare.total_commits
+}
+
+module.exports = {fetch_user_activity, fetch_push_commits}
