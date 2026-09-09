@@ -10,8 +10,10 @@ async function main() {
                 case "CommitCommentEvent":
                     break;
                 case "CreateEvent":
+                    console.log(`- ${gevent.payload.ref_type} created in ${gevent.repo.name} `)
                     break;
                 case "DeleteEvent":
+                    console.log(`- ${gevent.payload.ref_type} deleted in ${gevent.repo.name} `)
                     break;
                 case "DiscussionEvent":
                     break;
@@ -35,7 +37,7 @@ async function main() {
                     break;
                 case "PushEvent":
                     const total_commits = await fetch_push_commits(gevent.repo.url, gevent.payload.head, gevent.payload.before);
-                    console.log(`- Pushed ${total_commits} commits to ${gevent.repo.name}`)
+                    console.log(`- pushed ${total_commits} commits to ${gevent.repo.name}`)
                     break;
                 case "ReleaseEvent":
                     break;
