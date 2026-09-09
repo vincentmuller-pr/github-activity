@@ -29,7 +29,7 @@ async function main() {
                     console.log(`- issue/PR comment ${gevent.payload.action} in ${gevent.repo.name}`)
                     break;
                 case "IssuesEvent":
-                    console.log(`- ${gevent.payload.action} issue in ${gevent.repo.name}`)
+                    console.log(`- ${gevent.payload.action} an issue in ${gevent.repo.name}`)
                     break;
                 case "MemberEvent":
                     console.log(`- ${gevent.payload.action} to ${gevent.repo.name}`)
@@ -54,7 +54,7 @@ async function main() {
                     console.log(`- ${gevent.payload.action} release in ${gevent.repo.name}`)
                     break;
                 case "WatchEvent":
-                    console.log(`- stared ${gevent.repo.name}`)
+                    console.log(`- starred ${gevent.repo.name}`)
                     break;
             }
         }
